@@ -23,6 +23,10 @@
             colors: {
               custom: "#1DD100",
             },
+            fontFamily: {
+              raleway: "Raleway",
+              inter: "Inter, sans-serif",
+            }
           },
         },
       };
@@ -98,13 +102,49 @@
             a id nisi.
           </p>
           <button
-            class="btn bg-custom font-semibold border-none text-lg lg:text-xl lg:px-8"
+            class="btn bg-custom font-bold border-none text-lg lg:text-xl lg:px-8"
           >
             Buy Tickets
           </button>
         </div>
       </div>
     </section>
+    <!-- best offer section -->
+    <section class="lg:w-10/12 w-11/12 mx-auto container mt-12 lg:mt-16">
+      <h1 class="text-center text-xl lg:text-5xl font-bold mb-5 lg:mb-10">
+        Best offers for you
+      </h1>
+      <div class="flex justify-center items-center lg:flex-row flex-col gap-6">
+        <div
+          class="bg-[#FFBF0F] flex lg:w-6/12 rounded-3xl items-center justify-between px-6 lg:px-20"
+        >
+          <div class="">
+            <h3 class="text-2xl lg:text-4xl font-black">15% OFF</h3>
+            <p class="text-lg lg:text-xl font-semibold">on your next purchase</p>
+            <p class="text-base lg:text-lg opacity-60 font-medium">use by January 2024</p>
+          </div>
+          <img src="./images/cupon-devider.png" alt="" />
+          <div class="">
+            <h4 id="couponCode" class="font-bold text-xl lg:text-3xl font-raleway">NEW15</h4>
+            <p class="text-lg lg:text-xl font-medium opacity-50">Coupon Code</p>
+          </div>
+        </div>
+        <div class="bg-[#F78C9C] flex lg:w-6/12 rounded-3xl items-center justify-between px-6 lg:px-20">
+          <div class="">
+            <h3 class="text-2xl lg:text-4xl font-black">20% OFF</h3>
+            <p class="text-lg lg:text-xl font-semibold">on your next purchase</p>
+            <p class="text-base lg:text-lg opacity-60 font-medium">use by January 2024</p>
+          </div>
+          <img src="./images/cupon-devider.png" alt="" />
+          <div class="">
+            <h4 id="couponCode" class="font-bold text-xl lg:text-3xl font-raleway">Couple 20</h4>
+            <p class="text-lg lg:text-xl font-medium opacity-50">Coupon Code</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>
