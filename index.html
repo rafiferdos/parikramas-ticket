@@ -195,9 +195,9 @@
           </div>
 
           <!-- destination and ticket part -->
-          <div class="bg-white flex rounded-3xl mb-24">
-            <div class="w-8/12 lg:p-10 p-2 flex flex-col justify-center">
-              <div class="flex justify-between">
+          <div class="bg-white flex lg:flex-row flex-col rounded-3xl mb-24">
+            <div class="lg:w-8/12 lg:p-10 p-5 flex flex-col justify-center">
+              <div class="flex lg:flex-row flex-col lg:gap-2 gap-6 justify-between">
                 <div class="flex space-x-2 lg:space-x-5">
                   <div class="flex gap-3 lg:gap-8">
                     <img src="./images/bus-logo.png" alt="" />
@@ -249,7 +249,7 @@
               </div>
             </div>
             <img
-              class="lg:w-1/12 h-[450px]"
+              class="lg:w-1/12 hidden lg:block lg:h-[450px] rotate-90 lg:rotate-0"
               src="./images/info-devider.png"
               alt=""
             />
@@ -265,9 +265,10 @@
               </p>
             </div>
           </div>
+
           <!-- ticketing interface part -->
-          <div class="grid grid-cols-12 bg-white rounded-3xl mb-24 p-10">
-            <div class="first-div space-y-4">
+          <div class="grid grid-cols-12 grid-rows-2 lg:grid-rows-1 bg-white rounded-3xl mb-8 lg:mb-24 p-2 lg:p-10">
+            <div class="first-div space-y-4 row-span-1">
               <h3 class="text-2xl font-raleway font-semibold">
                 Select Your Seat
               </h3>
@@ -318,10 +319,10 @@
                 </div>
               </div>
             </div>
-            <div class="second-div">
+            <div class="second-div row-span-1">
               <div class="divider ms-12 h-full divider-horizontal"></div>
             </div>
-            <div class="third-div space-y-4">
+            <div class="third-div space-y-4 row-span-1">
               <h3 class="text-2xl font-raleway font-semibold">
                 Select Your Seat
               </h3>
