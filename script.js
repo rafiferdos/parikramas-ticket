@@ -23,13 +23,5 @@ document.getElementById('seats').addEventListener('click', function (e) {
     }
 });
 
-
-// document.getElementById('seats').addEventListener('click', function (e) {
-//     if (e.target.tagName === 'BUTTON') {
-//         //add class to button
-//         e.target.classList.toggle('bg-custom');
-//         e.target.classList.toggle('text-white');
-//         e.target.classList.toggle('hover:bg-custom');
-        
-//     }
-// });
+let selected = [];
+// console.log(selected);
