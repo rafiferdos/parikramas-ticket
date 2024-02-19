@@ -10,16 +10,35 @@ document.getElementById('seats').addEventListener('click', function (e) {
 
         document.getElementById('phoneNo').addEventListener('input', function () {
             let phoneNoDigit = document.getElementById('phoneNo').value;
-            checkConditions(phoneNoDigit, selected.length);
+            phoneNoDigit = parseInt(phoneNoDigit);
+            if (isNaN(phoneNoDigit)) {
+                // alert('Please enter a valid phone number');
+            } else {
+                checkConditions(phoneNoDigit, selected.length);
+            }
         });
 
         document.getElementById('seats').addEventListener('click', function (e) {
             let phoneNoDigit = document.getElementById('phoneNo').value;
-            checkConditions(phoneNoDigit, selected.length);
+            phoneNoDigit = parseInt(phoneNoDigit);
+            if (!isNaN(phoneNoDigit)) {
+                checkConditions(phoneNoDigit, selected.length);
+            }
+        });
+
+        document.getElementById('toEnableAfter1DigitAndSelection').addEventListener('click', function () {
+            let phoneNoDigit = document.getElementById('phoneNo').value;
+            phoneNoDigit = parseInt(phoneNoDigit);
+            if (isNaN(phoneNoDigit)) {
+                alert('Please enter a valid phone number');
+                document.getElementById('phoneNo').value = '';
+            } else {
+                checkConditions(phoneNoDigit, selected.length);
+            }
         });
 
         function checkConditions(phoneNoDigit, selectedSeats) {
-            if (phoneNoDigit.length > 0 && selectedSeats > 0) {
+            if (phoneNoDigit.toString().length > 0 && selectedSeats > 0) {
                 document.getElementById('toEnableAfter1DigitAndSelection').removeAttribute('disabled');
             }
             else {
