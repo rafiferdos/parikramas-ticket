@@ -38,7 +38,7 @@ document.getElementById('seats').addEventListener('click', function (e) {
                 selected.push(e.target);
             }
         } else {
-            selected = selected.filter(function(seat) {
+            selected = selected.filter(function (seat) {
                 return seat !== e.target;
             });
         }
@@ -146,7 +146,7 @@ document.getElementById('seats').addEventListener('click', function (e) {
         let totalPrice = 0;
         let grandTotalPrice = 0;
         let discountPrice = 0;
-        selected.forEach(function(seat){
+        selected.forEach(function (seat) {
             totalPrice += 550;
             grandTotalPrice = totalPrice;
         });
@@ -187,7 +187,7 @@ document.getElementById('seats').addEventListener('click', function (e) {
                     document.getElementById('alertDanger').classList.add('hidden');
                 }
                 );
-            }            
+            }
         }
         );
 
@@ -203,7 +203,7 @@ document.getElementById('seats').addEventListener('click', function (e) {
     if (document.getElementById('toEnableAfter4TicketInput').hasAttribute('disabled')) {
         document.getElementById('alertDanger').classList.add('hidden');
     }
-    
+
 
 });
 
@@ -212,4 +212,10 @@ document.getElementById('seats').addEventListener('click', function (e) {
 // click Buy Tickets button it will smoothly scroll the page to the #destination id.
 document.getElementById('scrollToDestination').addEventListener('click', function () {
     document.getElementById('destination').scrollIntoView({ behavior: 'smooth' });
+});
+
+// reload page when click on the #reloadPage button and scroll to the top of the page.
+document.getElementById('reloadPage').addEventListener('click', function () {
+    window.location.reload();
+    window.scrollTo(0, 0);
 });
