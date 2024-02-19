@@ -14,7 +14,6 @@ document.getElementById('seats').addEventListener('click', function (e) {
         });
 
         document.getElementById('seats').addEventListener('click', function (e) {
-            // your seat selection code here
             let phoneNoDigit = document.getElementById('phoneNo').value;
             checkConditions(phoneNoDigit, selected.length);
         });
