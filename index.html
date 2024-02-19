@@ -102,11 +102,13 @@
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button
-              class="btn bg-custom font-bold border-none text-lg lg:text-xl lg:px-8"
+            <a
+              class="btn hover:text-custom bg-custom hover:bg-black font-bold border-none text-lg lg:text-xl lg:px-8"
+              role="button"
+              href="#destination"
             >
               Buy Tickets
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -179,6 +181,7 @@
       <!-- ticket-seat-destination section -->
       <section
         class="border rounded-t-3xl border-y-2 border-[#1DD100] bg-[#F7F8F8]"
+        id="destination"
       >
         <div class="container w-11/12 lg:w-10/12 mx-auto">
           <div
@@ -279,32 +282,53 @@
               </div>
               <hr class="border-dashed border-gray-400" />
               <div>
-                <div class="parent space-y-4">
-                  <div class="div1 flex items-center justify-center mr-16">
-                    <button class="btn px-16">
+                <div class="space-y-4">
+                  <div class="div1 flex items-center justify-end">
+                    <button
+                      class="btn px-12 mb-4 tooltip"
+                      data-tip="driver seat"
+                    >
                       <img src="./images/steering.jpg" alt="" />
                     </button>
                   </div>
-                  <div class="div2 flex items-center justify-center">
+                  <!-- <div class="div2 flex items-center justify-center">
                     <p class="text-xl font-bold opacity-50">A</p>
                   </div>
-                  <div class="div3 flex gap-2">
-                    <button class="btn btn-lg px-12">A1</button>
-                    <button class="btn btn-lg px-12">A2</button>
+                  <div class="div3 flex gap-2" id="groupA">
+                    <button class="btn btn-lg px-12" id="a1">A1</button>
+                    <button class="btn btn-lg px-12" id="a2">A2</button>
                     <div class="p-4"></div>
-                    <button class="btn btn-lg px-12">A3</button>
-                    <button class="btn btn-lg px-12">A4</button>
+                    <button class="btn btn-lg px-12" id="a3">A3</button>
+                    <button class="btn btn-lg px-12" id="a4">A4</button>
                   </div>
                   <div class="div4 flex items-center justify-center">
                     <p class="text-xl font-bold opacity-50">B</p>
                   </div>
                   <div class="div5">
-                    <div class="div3 flex gap-2">
-                      <button class="btn btn-lg px-12">B1</button>
-                      <button class="btn btn-lg px-12">B2</button>
+                    <div class="div3 flex gap-2" id="groupB">
+                      <button class="btn btn-lg px-12" id="b1">B1</button>
+                      <button class="btn btn-lg px-12" id="b2">B2</button>
                       <div class="p-4"></div>
-                      <button class="btn btn-lg px-12">B3</button>
-                      <button class="btn btn-lg px-12">B4</button>
+                      <button class="btn btn-lg px-12" id="b3">B3</button>
+                      <button class="btn btn-lg px-12" id="b4">B4</button>
+                    </div>
+                  </div> -->
+                  <div class="flex w-full">
+                    <div
+                      class="w-1/5 flex flex-col items-center justify-evenly"
+                    >
+                      <p class="text-xl font-bold opacity-50">A</p>
+                      <p class="text-xl font-bold opacity-50">B</p>
+                    </div>
+                    <div class="w-4/5 parent grid gap-5">
+                      <button class="btn btn-lg px-12 div1" id="a1">A1</button>
+                      <button class="btn btn-lg px-12 div2" id="a2">A2</button>
+                      <button class="btn btn-lg px-12 div3" id="a3">A3</button>
+                      <button class="btn btn-lg px-12 div4" id="a4">A4</button>
+                      <button class="btn btn-lg px-12 div5" id="b1">B1</button>
+                      <button class="btn btn-lg px-12 div6" id="b2">B2</button>
+                      <button class="btn btn-lg px-12 div7" id="b3">B3</button>
+                      <button class="btn btn-lg px-12 div8" id="b4">B4</button>
                     </div>
                   </div>
                 </div>
@@ -319,7 +343,7 @@
               </h3>
               <hr class="border-dashed border-gray-400" />
               <!-- price update section -->
-              <div class="bg-[#F7F8F8] p-4 rounded-2xl">
+              <div class="bg-[#F7F8F8] p-10 rounded-2xl">
                 <div class="overflow-x-auto">
                   <table class="table">
                     <thead>
