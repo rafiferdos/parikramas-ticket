@@ -105,7 +105,7 @@
             <a
               class="btn hover:text-custom bg-custom hover:bg-black font-bold border-none text-lg lg:text-xl lg:px-8"
               role="button"
-              href="#destination"
+              id="scrollToDestination"
             >
               Buy Tickets
             </a>
@@ -216,7 +216,11 @@
                 <button
                   class="btn btn-outline bg-[#1DD10026] border-none text-[#1DD100]"
                 >
-                  <img src="./images/seat-green.png" alt="" />40 Seats Left
+                  <img src="./images/seat-green.png" alt="" /><span
+                    id="decreaseCount"
+                    >8</span
+                  >
+                  Seats Left
                 </button>
               </div>
               <!-- destiny part -->
@@ -332,15 +336,20 @@
                       <tr>
                         <th class="text-lg">
                           Seat
-                          <div class="ms-2 badge bg-custom text-white">9</div>
+                          <div
+                            class="ms-2 badge bg-custom text-white"
+                            id="seatCount"
+                          >
+                            0
+                          </div>
                         </th>
                         <th class="text-lg">Class</th>
                         <th class="text-lg">Price</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="seatInfoTable">
                       <tr>
-                        <td>Nothing selected!</td>
+                        <td id="toBeRemoved">Nothing selected!</td>
                       </tr>
                       <!-- <tr>
                         <td>Cy Ganderton</td>
@@ -353,20 +362,74 @@
                 <hr class="border border-gray-400" />
                 <div class="flex items-center justify-between space-y-3">
                   <p class="text-lg opacity-60 font-bold">Total Price</p>
-                  <p class="text-lg opacity-60 font-bold">BDT 1000</p>
+                  <p class="text-lg opacity-60 font-bold">
+                    BDT <span id="totalPrice">0</span>
+                  </p>
                 </div>
                 <div class="join w-full mt-8">
+                  <div class="hidden w-full" id="alertSuccess">
+                    <div role="alert" class="alert alert-success">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="stroke-current shrink-0 h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      <span>Your coupon code has been applied!</span>
+                    </div>
+                  </div>
                   <input
                     class="input input-bordered join-item w-full"
                     placeholder="Have any coupon?"
+                    disabled
+                    id="toEnableAfter4TicketInput"
                   />
-                  <button class="btn bg-custom text-white join-item rounded-xl">
+                  <button
+                    class="btn bg-custom text-white join-item rounded-xl"
+                    disabled
+                    id="toEnableAfter4TicketButton"
+                  >
                     Apply
                   </button>
                 </div>
+                <div class="hidden mt-4 w-full" id="alertDanger">
+                  <div role="alert" class="alert alert-error">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="stroke-current shrink-0 h-6 w-6 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span class="text-white">Error! Wrong coupon code.</span>
+                  </div>
+                </div>
+                <div class="hidden" id="discountedPriceHiddenArea">
+                  <div class="flex items-center justify-between space-y-3">
+                    <p class="text-lg opacity-60 font-bold">Discounted Price</p>
+                    <p class="text-lg opacity-60 font-bold">
+                      BDT <span id="discountedPrice">0</span>
+                    </p>
+                  </div>
+                </div>
                 <div class="flex items-center justify-between space-y-3">
                   <p class="text-lg opacity-60 font-bold">Grand Total</p>
-                  <p class="text-lg opacity-60 font-bold">BDT 1100</p>
+                  <p class="text-lg opacity-60 font-bold">
+                    BDT <span id="grandTotalPrice">0</span>
+                  </p>
                 </div>
               </div>
               <!-- subscribtion like area -->
@@ -389,6 +452,7 @@
                   type="text"
                   placeholder="Enter your name"
                   class="input input-bordered w-full"
+                  id="phoneNo"
                   required
                 />
               </label>
@@ -405,6 +469,8 @@
               <button
                 class="btn btn-block bg-custom text-white"
                 onclick="my_modal_1.showModal()"
+                disabled
+                id="toEnableAfter1DigitAndSelection"
               >
                 Next
               </button>
